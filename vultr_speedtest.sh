@@ -266,6 +266,7 @@ benchtest()
 
 vultr_test()
 {
+	prewget
 	bdtest
 	pingtest
 }
