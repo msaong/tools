@@ -264,7 +264,11 @@ benchtest()
 	rm -rf UnixBench5.1.3.tgz UnixBench
 }
 
-
+vultr_test()
+{
+	bdtest
+	pingtest
+}
 
 simple_test()
 {
@@ -315,6 +319,9 @@ all_test()
 action=$1
 [ -z $1 ] && action=n
 case "$action" in
+v)
+    vultr_test
+    ;;
 s)
     simple_test
     ;;
